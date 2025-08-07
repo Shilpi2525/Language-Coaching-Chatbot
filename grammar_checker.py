@@ -13,8 +13,8 @@ def grammar_ui():
 
 
     # Page config
-    st.title("✍️ Grammar Correction")
-    st.markdown("Enter a sentence, and I'll correct your grammar!")
+    st.title("Grammar Correction")
+    st.markdown("Type a sentence, and I’ll help you fix any grammar mistakes!")
 
     # Input text
     user_input = st.text_area("Your sentence:")
@@ -32,7 +32,7 @@ def grammar_ui():
                 # Display results
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.markdown("### 📝 Original")
+                    st.markdown("### 📝 Original Text")
                     st.text(result.get("original", ""))
                 with col2:
                     st.markdown(f"### 🌐 Language: {result.get('language', 'Unknown')}")
@@ -41,9 +41,9 @@ def grammar_ui():
                 # Handle different correction states
                 corrected = result.get("corrected")
                 if corrected == "Input Correct":
-                    st.success("✅ Perfect! No errors found.")
+                    st.success("Perfect! No errors found.")
                 elif corrected is None:
-                    st.warning("🤷 Input unclear - couldn't analyze")
+                    st.warning("Input unclear - couldn't analyze !!")
                 else:
                     st.markdown("### ✅ Corrected Version")
                     st.success(corrected)
