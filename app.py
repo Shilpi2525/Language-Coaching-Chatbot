@@ -5,7 +5,7 @@ from grammar_checker import grammar_ui
 # Configure page
 st.set_page_config(
     page_title="Language Coaching Chatbot",
-    page_icon="🎤",
+    page_icon="💬",
     layout="wide"
 )
 
