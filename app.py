@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 from grammar_checker import grammar_ui
+from pronounciation_checker import pronounciation_feedback
 
 # Configure page
 st.set_page_config(
@@ -35,3 +36,7 @@ if page == "Select":
 # Grammar Correction Page
 elif page == "Grammar Correction":
     grammar_ui()
+
+elif page=="Pronounciation Feedback":
+    pronounciation_feedback()
+
