@@ -1,7 +1,8 @@
 import streamlit as st
 from PIL import Image
 from grammar_checker import grammar_ui
-from pronounciation_checker import pronounciation_feedback
+from pronunciation_checker import pronunciation_feedback
+from fluent import check_fluent
 
 # Configure page
 st.set_page_config(
@@ -14,7 +15,7 @@ st.set_page_config(
 st.sidebar.title("Learn with us")
 page = st.sidebar.selectbox(
     "Choose an option",
-    ["Select", "Grammar Correction"]
+    ["Select", "Grammar Correction","Pronunciation Correction","API check"]
 )
 
 # Home/Intro Page
@@ -37,6 +38,10 @@ if page == "Select":
 elif page == "Grammar Correction":
     grammar_ui()
 
-elif page=="Pronounciation Feedback":
-    pronounciation_feedback()
+elif page == "Pronunciation Correction":
+    pass
+    #pronunciation_feedback()
+
+elif page == "API check":
+    check_fluent()
 
